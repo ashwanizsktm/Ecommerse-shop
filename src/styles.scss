@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
 body{
   font-family: 'Roboto', sans-serif;
 }

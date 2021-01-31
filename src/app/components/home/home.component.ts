@@ -1,4 +1,6 @@
+import { DataService } from './../../service/data.service';
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  productDataItems = []
+
+  constructor(private dataservice: DataService) { }
 
   ngOnInit(): void {
+    this.dataservice.getProductsData().subscribe(data => {
+      this.productDataItems = data;
+      console.log(this.productDataItems);
+
+    })
+  }
+
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['prev', 'next'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 2
+      }
+    },
+    nav: true
   }
 
 }

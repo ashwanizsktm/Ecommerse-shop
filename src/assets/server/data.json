@@ -1,0 +1,23 @@
+[
+  {
+  "productName":"Nike Air Zoom Tempo Next% FlyEase",
+  "productType": "Women’s Running Shoe",
+  "productImg":"../Images/running-shoes-1.png",
+  "productPrice": "₹ 17,595"
+  },
+
+  {
+  "productName":"Nike Air Zoom Pegasus 37 FlyEase",
+  "productType": "Men’s Running Shoe",
+  "productImg":"../Images/running-shoes-2.png",
+  "productPrice": " ₹ 9,995"
+  },
+
+  {
+  "productName":"Nike Air Max 90 FlyEase",
+  "productType": "normal Running Shoe",
+  "productImg":"../Images/running-shoes-1.png",
+  "productPrice": " ₹ 10,295"
+  }
+
+]
