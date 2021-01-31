@@ -1,0 +1,23 @@
+<nav class="nav">
+  <div class="nav__logo">
+    <img src="../../../assets/Images/Vector (4).svg" alt="nav-logo">
+  </div>
+
+  <ul class="nav__list">
+    <li class="nav__list--item" *ngFor="let navItem of navItems">
+      <a href="#" class="nav__list--item-link"> {{navItem}} </a>
+    </li>
+  </ul>
+
+  <div class="nav__search">
+    <label for="search" class="nav__search--label">search</label>
+    <img src="../../../assets/Images/Vector (3).svg" alt="search-logo">
+    <input type="text" placeholder="seach products" class="nav__search--input" id="search">
+  </div>
+
+  <div class="nav__favorite">
+    <img src="../../../assets/Images/Vector (1).svg" alt="favorite">
+    <img src="../../../assets/Images/Vector (2).svg" alt="lock">
+  </div>
+
+</nav>

@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="footer__links-container">
+    <ul class="footer__store">
+      <li class="footer__store--items" *ngFor="let storeItem of footerStoreItems">
+        <a href="#" class="footer__store--items-link"> {{ storeItem }} </a>
+      </li>
+    </ul>
+
+    <ul class="footer__help">
+      <li class="footer__help--items" *ngFor="let helpItem of footerHelpItems">
+        <a href="#" class="footer__help--items-link"> {{ helpItem }} </a>
+      </li>
+    </ul>
+
+    <ul class="footer__about">
+      <li class="footer__about--items" *ngFor="let aboutItem of footerAboutItems">
+        <a href="#" class="footer__about--items-link"> {{ aboutItem }} </a>
+      </li>
+    </ul>
+
+    <ul class="footer__icons">
+       <li class="footer__icons--item" *ngFor= "let social of footerSocialLinkandImg">
+         <a [href]= "social.link">
+          <img  [src]="social.img" alt="social">
+         </a>
+       </li>
+    </ul>
+  </div>
+
+  <div class="footer__copyright-container">
+    <span class="footer__location">
+      <img src="../../../assets/Images/location.svg" alt="location">
+      <span class="footer__location-label">India</span>
+    </span>
+
+    <span class="footer__copyright">
+      &copy; nike, inc. all right reserved
+    </span>
+
+    <ul class="footer__copyright--list">
+      <li class="footer__copyright--list-item" *ngFor= "let copyrightlink of footerCopyrightLinkItems">
+        <a href="#" class="footer__copyright--list-item-link"> {{copyrightlink}} </a>
+      </li>
+    </ul>
+  </div>
+</footer>

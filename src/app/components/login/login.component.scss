@@ -1,0 +1,110 @@
+.signin {
+  width  : 45%;
+  padding: 50px;
+  margin : 0 auto;
+
+  &__logo {
+    text-align: center;
+
+    img {
+      width     : 100px;
+      height    : auto;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin        : 10px 0;
+    text-transform: uppercase;
+    font-size     : 17px;
+    font-weight   : bolder;
+  }
+
+  &__form {
+    text-align: center;
+
+    &--input {
+      border          : none;
+      background-color: rgba(45, 209, 18, 0.4);
+      padding         : 10px;
+      margin          : 10px 0;
+      border-radius   : 5px;
+      width           : 100%;
+
+      &:focus {
+        outline: none;
+        border : none;
+      }
+    }
+
+    &--checkbox {
+      display    : inline-flex;
+      align-items: center;
+
+      &-wrap {
+        display        : flex;
+        justify-content: space-between;
+      }
+
+      input {
+        height: 20px;
+        width : 20px;
+      }
+
+      label {
+        color       : rgba(0, 0, 0, 0.7);
+        font-size   : 13px;
+        padding-left: 10px;
+      }
+    }
+
+    &--forgot-password>a {
+      text-decoration: none;
+      color          : rgba(0, 0, 0, 0.7);
+      font-size      : 13px;
+    }
+
+    &--agreement {
+      color     : rgba(0, 0, 0, 0.7);
+      font-size : 12px;
+      padding   : 5px;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    &--submit-btn {
+      width           : 100%;
+      margin-top      : 20px;
+      background-color: rgba(45, 209, 18, 0.4);
+      padding         : 9px;
+      text-transform  : uppercase;
+      font-weight     : bolder;
+      border          : none;
+      outline         : none;
+      border-radius   : 5px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border : none;
+      }
+    }
+
+    &--member {
+      display: inline-block;
+      margin-top: 20px;
+      font-size : 12px;
+      color     : rgba(0, 0, 0, 0.7);
+    }
+
+    &--member>a {
+      font-size: 12px;
+      color    : rgba(0, 0, 0, 0.7);
+      text-decoration: none;
+    }
+  }
+}
+
+::placeholder {
+  color: rgb(51, 50, 50);
+}

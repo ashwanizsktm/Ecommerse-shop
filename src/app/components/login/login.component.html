@@ -1,0 +1,79 @@
+<div class="signin">
+  <div class="signin__logo">
+    <img src="../../../assets/Images/Vector (4).svg" alt="logo">
+    <div class="signin__title">
+      your account for <br> everything like.
+    </div>
+  </div>
+
+  <form class="signin__form" [formGroup]="form">
+    <input type="email" placeholder="Email Address"
+     class="signin__form--input signin__form--input-email"
+      formControlName="email" required>
+
+    <div *ngIf="form.get('email').invalid &&
+    (form.get('email').dirty || form.get('email').touched)" class="help-block">
+      <div *ngIf="form.get('email').errors.required" style="color: red; font-size: 12px;">
+        Email is required required!
+      </div>
+
+      <div *ngIf="form.get('email').errors.email" style="color: red; font-size: 12px;">
+        Enter correct email format!
+      </div>
+
+      <div *ngIf="form.get('email').errors.minlength" style="color: red; font-size: 12px;">
+        Email is too short minimum 5 character should be there!
+      </div>
+
+      <div *ngIf="form.get('email').errors.maxlength" style="color: red; font-size: 12px;">
+        Email is too long. maximum 25 chaaracters are allowed!
+      </div>
+
+    </div>
+
+    <!-- <span>Enter correct email format, minimum 5 and maximum 30 chaaracters are allowed.</span> -->
+    <br>
+    <input type="password" placeholder="Password" class="signin__form--input signin__form--input-password"
+      formControlName="password" required>
+
+      <div *ngIf="form.get('password').invalid &&
+      (form.get('password').dirty || form.get('password').touched)" class="help-block">
+        <div *ngIf="form.get('password').errors.required" style="color: red; font-size: 12px;">
+          Password is required!
+        </div>
+
+        <div *ngIf="form.get('password').errors.pattern" style="color: red; font-size: 12px;">
+          Must contain atleast 1 uppercase 1 lowercase letter!
+        </div>
+
+        <div *ngIf="form.get('password').errors.minlength" style="color: red; font-size: 12px;">
+          password must have minimum 8 character!
+        </div>
+
+        <div *ngIf="form.get('password').errors.maxlength" style="color: red; font-size: 12px;">
+          Password is too long. maximum 20 chaaracters are allowed!
+        </div>
+
+      </div>
+    <br>
+
+    <div class="signin__form--checkbox-wrap">
+      <div class="signin__form--checkbox">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">keep me sign in</label>
+      </div>
+      <div class="signin__form--forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+    </div>
+
+    <p class="signin__form--agreement">By logging in, you agree to Nike's Privacy Policy and
+      <br> Terms of Use.
+    </p>
+    <button type="submit" class="signin__form--submit-btn" (click)="onSubmit()" [disabled]="form.invalid"> Sign In
+    </button>
+
+    <span class="signin__form--member">Not a member?<a href="#"> Join Us </a></span>
+  </form>
+
+</div>
