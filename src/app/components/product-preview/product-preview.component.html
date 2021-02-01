@@ -1,0 +1,25 @@
+<section class="product-preview">
+  <p class="product-preview__title"></p>
+  <img src="../../../assets/Images/back.svg" alt="back-logo">
+    <div class="product-preview__items">
+      <img [src]= "item" alt="logo" *ngFor= "let item of productItemImages">
+  </div>
+  <div class="product-preview__details">
+     <ul class="product-preview__details--shoe-property-list">
+        <li class="product-preview__details--shoe-property-list-item"
+        *ngFor= "let shoedata of shoeProperty"> {{shoedata}}  </li>
+     </ul>
+     <span class="product-preview__details--shoe-cost">
+      ₹ 17,595
+     </span>
+  </div>
+
+  <div class="product-preview__size">
+     <span class="product-preview__size--select">select size</span>
+     <span class="product-preview__size--guide">size guide</span>
+  </div>
+
+  <div class="product-preview__size--btn">
+    <button *ngFor= "let btnText of productBtnText"> {{btnText}} </button>
+  </div>
+</section>

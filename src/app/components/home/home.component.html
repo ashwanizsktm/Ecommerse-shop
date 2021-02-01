@@ -1,9 +1,7 @@
 <owl-carousel-o [options]="customOptions">
-
   <ng-template carouselSlide *ngFor= "let product of productDataItems">
-
     <div class="product__card">
-      <img *ngIf="product" [src]= "product.productImg" alt="logo">
+      <img *ngIf= "product" src= "../../../assets/Images/running-shoes-2.png" alt="logo">
       <div class="product__card--details">
         <div class="product__card--catogory">
             <p class="product__card--catogory-name"> {{product.productName}} </p>
@@ -13,6 +11,5 @@
       </div>
     </div>
   </ng-template>
-
 </owl-carousel-o>
 
