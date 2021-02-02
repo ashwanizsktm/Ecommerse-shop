@@ -1,25 +1,69 @@
 <section class="product-preview">
-  <p class="product-preview__title"></p>
-  <img src="../../../assets/Images/back.svg" alt="back-logo">
+  <p class="product-preview__title">Price Shown is Inclusive of all Taxes.</p>
+  <img src="../../../assets/Images/back.svg" alt="back-logo"
+    class="product-preview__back-img">
+
+  <div class="product-preview__details-wrap">
     <div class="product-preview__items">
-      <img [src]= "item" alt="logo" *ngFor= "let item of productItemImages">
-  </div>
-  <div class="product-preview__details">
-     <ul class="product-preview__details--shoe-property-list">
-        <li class="product-preview__details--shoe-property-list-item"
-        *ngFor= "let shoedata of shoeProperty"> {{shoedata}}  </li>
-     </ul>
-     <span class="product-preview__details--shoe-cost">
-      ₹ 17,595
-     </span>
-  </div>
+      <img [src]="item" alt="logo" *ngFor="let item of productItemImages">
+    </div>
 
-  <div class="product-preview__size">
-     <span class="product-preview__size--select">select size</span>
-     <span class="product-preview__size--guide">size guide</span>
-  </div>
 
-  <div class="product-preview__size--btn">
-    <button *ngFor= "let btnText of productBtnText"> {{btnText}} </button>
+    <div class="product-preview__details">
+      <ul class="product-preview__details--shoe-property-list-price">
+        <li class="product-preview__details--shoe-property-list-item-price" *ngFor="let shoedata of shoePriceProperty">
+          {{shoedata}}
+        </li>
+      </ul>
+
+      <ul class="product-preview__details--shoe-property-list-property">
+        <li class="product-preview__details--shoe-property-list-item-property" *ngFor="let shoedata of shoeProperty">
+          {{shoedata}}
+        </li>
+      </ul>
+
+      <div class="product-preview__size">
+        <span class="product-preview__size--select">select size</span>
+        <span class="product-preview__size--guide">size guide</span>
+      </div>
+      <div class="product-preview__size--btn">
+        <button *ngFor="let btnText of productBtnText"> {{btnText}} </button>
+      </div>
+
+      <div class="product-preview__btns">
+        <button class="product-preview__btns--add">Add to Bag</button>
+        <button class="product-preview__btns--favorite">Favorite
+          <img src="../../../assets/Images/favorite.svg" alt="favorite"></button>
+      </div>
+
+      <div class="product-preview__description">
+        <p>
+          The ultra-responsive Nike Air Zoom Tempo Next% FlyEase is designed to help you get the most from
+          your training runs, so you can go confidently into your next (or first) race. It has a step-in
+          entry and an internal lacing mechanism you operate with one hand. Pull one loop to tighten,
+          another to release.
+        </p>
+        <p><strong> Colour Shown: </strong> White/Spruce Aura/Hyper Violet/Flash Crimson</p>
+        <p><strong> Style: </strong> CV1889-102 </p>
+      </div>
+
+      <span class="product-preview__detail-link">
+        <a href="#">view Product Detail</a>
+      </span>
+
+      <p class="product-preview__delivery-return">
+        Free Delivery and Return
+        <img src="../../../assets/Images/down-arrow.svg" alt="down-arrow" />
+      </p>
+
+      <div class="product-preview__review-wrap">
+        <p class="product-preview__review"> review(5) </p>
+        <div class="product-preview__ratings">
+          <img *ngFor="let rating of ratingImg" [src]="rating" alt="rating">
+        </div>
+        <img src="../../../assets/Images/down-arrow.svg" alt="down-arrow"
+          class="product-preview__ratings-down-arrow"  />
+      </div>
+    </div>
   </div>
 </section>

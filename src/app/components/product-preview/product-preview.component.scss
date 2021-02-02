@@ -1,0 +1,205 @@
+.product-preview {
+  // display: flex;
+  // justify-content: space-between;
+  width  : 90%;
+  margin : 0 auto;
+  padding: 20px;
+
+  &__title {
+    font-size  : 15px;
+    font-weight: 400;
+    text-align : center;
+  }
+
+  &__back-img {
+    height     : 18px;
+    margin-left: 20px;
+    margin-top : 10px;
+    width      : auto;
+    object-fit : cover;
+  }
+
+  &__items {
+    display  : flex;
+    flex-wrap: wrap;
+    flex     : 6;
+
+    img {
+      width     : auto;
+      height    : 320px;
+      object-fit: cover;
+      margin    : 15px;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+
+    }
+  }
+
+  &__details-wrap {
+    display        : flex;
+    justify-content: space-between;
+  }
+
+  &__details {
+    flex: 3;
+
+    &--shoe-property-list {
+      &-price {
+        display        : flex;
+        justify-content: space-between;
+      }
+
+      &-property {
+        margin-top: 5px;
+      }
+
+      &-item {
+        &-price {
+          &:first-child {
+            font-size: 13px;
+          }
+
+          &:nth-child(2) {
+            font-size: 14px;
+          }
+        }
+
+        &-property {
+          font-size  : 15px;
+          font-weight: bolder;
+        }
+
+      }
+    }
+  }
+
+  &__size {
+    display        : flex;
+    justify-content: space-between;
+
+    &--select {}
+
+    &--guide {}
+
+    &--btn {
+      display              : grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap                  : 10px;
+
+      button {
+        text-transform: uppercase;
+        border        : none;
+        background    : rgba(196, 196, 196, 0.35);
+        border-radius : 5px;
+        padding       : 7px 3px;
+        cursor        : pointer;
+
+        &focus {
+          border : none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__btns {
+    display       : flex;
+    flex-direction: column;
+    width         : 70%;
+    margin        : 0 auto;
+
+    &--add {
+      background   : rgba(45, 209, 18, 0.4);
+      border-radius: 50px;
+      padding      : 5px 14px;
+      border       : none;
+      cursor       : pointer;
+      margin       : 15px 0;
+
+      &:focus {
+        outline: none;
+        border : none;
+      }
+    }
+
+    &--favorite {
+      margin-bottom  : 10px;
+      background     : rgba(45, 209, 18, 0.4);
+      border-radius  : 50px;
+      padding        : 5px 14px;
+      border         : none;
+      cursor         : pointer;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+
+      img {
+        margin-left: 10px;
+      }
+
+      &:focus {
+        outline: none;
+        border : none;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 40px;
+    font-size : 13px;
+
+    p:nth-child(2) {
+      margin-top: 30px;
+    }
+
+    p:nth-child(3) {
+      margin-top   : 5px;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__detail-link {
+    a {
+      text-transform : capitalize;
+      text-decoration: rgba(196, 196, 196, 0.35);
+      color          : #000;
+      font-size      : 13px;
+    }
+  }
+
+  &__delivery-return {
+    margin-top   : 20px;
+    font-size    : 13px;
+    text-align   : center;
+    padding      : 5px 0;
+    border-top   : 1px solid rgba(196, 196, 196, 0.35);
+    border-bottom: 1px solid rgba(196, 196, 196, 0.35);
+
+  }
+
+  &__review-wrap {
+    display        : flex;
+    justify-content: space-around;
+  }
+
+  &__review {
+    font-size: 13px;
+  }
+
+  &__ratings {
+    &-down-arrow {
+      // height    : 18px;
+      // width     : auto;
+      // object-fit: cover;
+      // flex-grow : 2;
+      // text-align: left;
+    }
+  }
+}

@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class ProductPreviewComponent implements OnInit {
 
-  shoeProperty = [
+  shoePriceProperty = [
     "Men's Running Shoe",
+    "₹ 17,595"
+  ]
+
+  shoeProperty = [
     "Nike Air Zoom",
     "Tempo Next%",
     "FlyEase"
@@ -37,6 +41,13 @@ export class ProductPreviewComponent implements OnInit {
     "us 13",
   ]
 
+  ratingImg = [
+    "../../../assets/Images/star.svg",
+    "../../../assets/Images/star.svg",
+    "../../../assets/Images/star.svg",
+    "../../../assets/Images/star.svg",
+    "../../../assets/Images/star.svg",
+  ]
   constructor() { }
 
   ngOnInit(): void {
